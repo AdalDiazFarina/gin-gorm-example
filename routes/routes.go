@@ -5,7 +5,6 @@ import (
 	"github.com/manolors/full-api-example/controller"
 )
 
-//SetupRouter ... Configure routes
 func SetupRouter() *gin.Engine {
 	r := gin.Default()
 	v1 := r.Group("/v1")

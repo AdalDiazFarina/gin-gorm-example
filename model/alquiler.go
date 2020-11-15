@@ -15,5 +15,5 @@ type Alquiler struct {
 }
 
 func (a *Alquiler) TableName() string {
-	return "rent_a_car"
+	return "alquiler"
 }
