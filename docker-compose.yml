@@ -1,0 +1,16 @@
+version: "3"
+services:
+  mariadb:
+    image: "mariadb:10.5"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}
+      - MYSQL_DATABASE=alquilerCoches
+
+    volumes:
+      - db:/var/lib/mysql
+      - ./db:/docker-entrypoint-initdb.d/:ro
+    ports:
+      - 3306:3306
+
+volumes:
+  db: {}
